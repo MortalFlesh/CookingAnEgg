@@ -37,6 +37,7 @@ class Home
     public function sometimeGirlCooksEggs(): void
     {
         $girl = new Girl('name');
+        $girl->speak("I'm hungry, I'm going to cook some eggs.");
 
         $cookedEggs = $girl->cook(function (): Enjoyable {
             /** @var EggPack $eggPack */

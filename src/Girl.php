@@ -18,6 +18,11 @@ class Girl
         $this->name = $name;
     }
 
+    public function speak(string $somethingReallyImportant): void
+    {
+        echo sprintf('<p><em>Girl says</em>: "<strong>%s</strong>"</p>', $somethingReallyImportant);
+    }
+
     /**
      * @param string|Money $reallyGoodReason
      * @return string
@@ -28,7 +33,7 @@ class Girl
     }
 
     /**
-     * Age is private getter - you simply don`t ask a girl for age
+     * Age is private getter - you simply don't ask a girl for age
      *
      * @return int
      */
