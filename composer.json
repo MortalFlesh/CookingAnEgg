@@ -1,0 +1,16 @@
+{
+    "name": "mf/cooking-an-egg",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Petr Chromec",
+            "email": "mortal_flesh@seznam.cz"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MF\\CookingAnEgg\\": "src/"
+        }
+    },
+    "require": {}
+}

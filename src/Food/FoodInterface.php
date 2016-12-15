@@ -1,0 +1,7 @@
+<?php
+
+namespace MF\CookingAnEgg\Food;
+
+interface FoodInterface
+{
+}
