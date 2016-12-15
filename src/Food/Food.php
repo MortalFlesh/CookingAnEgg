@@ -2,7 +2,9 @@
 
 namespace MF\CookingAnEgg\Food;
 
-class Food implements FoodInterface
+use MF\CookingAnEgg\Enjoyable;
+
+class Food implements FoodInterface, Enjoyable
 {
     /** @var FoodInterface */
     private $food;
@@ -10,5 +12,9 @@ class Food implements FoodInterface
     public function addFood(FoodInterface $food): void
     {
         $this->food += $food;
+    }
+
+    public function enjoy()
+    {
     }
 }

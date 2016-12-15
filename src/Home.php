@@ -38,7 +38,7 @@ class Home
     {
         $girl = new Girl('name');
 
-        $cookedEggs = $girl->cook(function () {
+        $cookedEggs = $girl->cook(function (): Enjoyable {
             /** @var EggPack $eggPack */
             $eggPack = $this->fridge->get(EggPack::class);
             $eggs = $eggPack->getEggs(2);
