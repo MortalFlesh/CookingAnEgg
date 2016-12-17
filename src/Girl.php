@@ -3,9 +3,8 @@
 namespace MF\CookingAnEgg;
 
 use MF\CookingAnEgg\Food\Cake;
+use MF\CookingAnEgg\Food\FoodInterface;
 use MF\CookingAnEgg\Item\Present;
-use Symfony\Component\Console\Formatter\OutputFormatter;
-use Symfony\Component\Console\Formatter\OutputFormatterStyleStack;
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Console\Output\ConsoleOutput;
 use Symfony\Component\Console\Style\SymfonyStyle;
@@ -24,12 +23,24 @@ class Girl
     public function __construct(string $name)
     {
         $this->name = $name;
+        $this->age = 0;
         $this->voice = new SymfonyStyle(new ArgvInput(), new ConsoleOutput());
     }
 
     public function speak(string $somethingReallyImportant): void
     {
         $this->voice->text(sprintf('%s says: "%s"', $this->getName('Im speaking'), $somethingReallyImportant));
+        sleep(1);
+    }
+
+    public function wait(int $seconds): void
+    {
+        $this->voice->progressStart($seconds);
+        for ($i = 0; $i < $seconds; $i++) {
+            sleep(1);
+            $this->voice->progressAdvance();
+        }
+        $this->voice->progressFinish();
     }
 
     /**
@@ -68,6 +79,10 @@ class Girl
     public function enjoy(Enjoyable $somethingGood): void
     {
         $somethingGood->enjoy();
+
+        if ($somethingGood instanceof FoodInterface) {
+            $this->speak('Yummy');
+        }
     }
 
     /**
