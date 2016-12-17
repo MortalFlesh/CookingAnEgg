@@ -66,7 +66,7 @@ class Home
 
             $pan->put($cup->getContent());
 
-            sleep(5 * 60 * 60);
+            sleep(5);
 
             $this->cooker->turnOffHeater(1);
             $pan = $this->cooker->getFromHeater(1);

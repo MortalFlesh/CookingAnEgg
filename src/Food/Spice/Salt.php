@@ -2,6 +2,8 @@
 
 namespace MF\CookingAnEgg\Food\Spice;
 
-class Salt implements SpiceInterface
+use MF\CookingAnEgg\Item\ItemInterface;
+
+class Salt implements SpiceInterface, ItemInterface
 {
 }

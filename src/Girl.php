@@ -4,6 +4,11 @@ namespace MF\CookingAnEgg;
 
 use MF\CookingAnEgg\Food\Cake;
 use MF\CookingAnEgg\Item\Present;
+use Symfony\Component\Console\Formatter\OutputFormatter;
+use Symfony\Component\Console\Formatter\OutputFormatterStyleStack;
+use Symfony\Component\Console\Input\ArgvInput;
+use Symfony\Component\Console\Output\ConsoleOutput;
+use Symfony\Component\Console\Style\SymfonyStyle;
 
 class Girl
 {
@@ -13,14 +18,18 @@ class Girl
     /** @var int */
     private $age;
 
+    /** @var SymfonyStyle */
+    private $voice;
+
     public function __construct(string $name)
     {
         $this->name = $name;
+        $this->voice = new SymfonyStyle(new ArgvInput(), new ConsoleOutput());
     }
 
     public function speak(string $somethingReallyImportant): void
     {
-        echo sprintf('<p><em>Girl says</em>: "<strong>%s</strong>"</p>', $somethingReallyImportant);
+        $this->voice->text(sprintf('%s says: "%s"', $this->getName('Im speaking'), $somethingReallyImportant));
     }
 
     /**

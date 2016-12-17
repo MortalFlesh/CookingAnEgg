@@ -23,7 +23,7 @@ class Cooker
 
     public function getFromHeater(int $position): HeatableInterface
     {
-        $this->heaters[$position]->getHeatable();
+        return $this->heaters[$position]->getHeatable();
     }
 
     public function turnOnHeater(int $position): void
