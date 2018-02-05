@@ -5,11 +5,13 @@ CookingAnEgg
 
 ### With PHP
 ```bash
+composer install
 php home.php
 ```
 
 ### Without PHP
 ```bash
+./build.sh
 ./run.sh
 ```
 
