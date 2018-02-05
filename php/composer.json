@@ -13,6 +13,6 @@
         }
     },
     "require": {
-        "symfony/console": "^3.2"
+        "symfony/console": "^4"
     }
 }

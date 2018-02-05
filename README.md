@@ -1,15 +1,18 @@
 CookingAnEgg
 ============
 
-## Run
+## Run PHP version
+```bash
+cd php
+```
 
-### With PHP
+### Run with PHP
 ```bash
 composer install
 php home.php
 ```
 
-### Without PHP
+### Run without PHP
 ```bash
 ./build.sh
 ./run.sh
