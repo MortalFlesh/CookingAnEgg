@@ -22,11 +22,6 @@ class Home
     /** @var Cooker */
     private $cooker;
 
-    /**
-     * @param Fridge $fridge
-     * @param Shelf $shelf
-     * @param Cooker $cooker
-     */
     public function __construct(Fridge $fridge, Shelf $shelf, Cooker $cooker)
     {
         $this->fridge = $fridge;

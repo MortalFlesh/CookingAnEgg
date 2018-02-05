@@ -43,10 +43,7 @@ class Girl
         $this->voice->progressFinish();
     }
 
-    /**
-     * @param string|Money $reallyGoodReason
-     * @return string
-     */
+    /** @param string|Money $reallyGoodReason */
     public function getName($reallyGoodReason): string
     {
         return $reallyGoodReason ? $this->name : 'Fuck off!';
@@ -54,18 +51,13 @@ class Girl
 
     /**
      * Age is private getter - you simply don't ask a girl for age
-     *
-     * @return int
      */
     private function getAge(): int
     {
         return $this->age;
     }
 
-    /**
-     * @param Present[] $presents
-     * @param Cake $cake
-     */
+    /** @param Present[] $presents */
     public function birthday(array $presents, Cake $cake): void
     {
         foreach ($presents as $present) {
@@ -85,11 +77,8 @@ class Girl
         }
     }
 
-    /**
-     * @param callable :Enjoyable $cookingProcess
-     * @return Enjoyable
-     */
-    public function cook(callable $cookingProcess)
+    /** @param callable $cookingProcess () => Enjoyable */
+    public function cook(callable $cookingProcess): Enjoyable
     {
         return $cookingProcess();
     }

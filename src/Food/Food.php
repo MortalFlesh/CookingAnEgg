@@ -6,15 +6,20 @@ use MF\CookingAnEgg\Enjoyable;
 
 class Food implements FoodInterface, Enjoyable
 {
-    /** @var FoodInterface */
-    private $food;
+    /** @var string */
+    private $mixed;
 
-    public function addFood(FoodInterface $food): void
+    public function mixWith(FoodInterface $food): void
     {
-        $this->food += $food;
+        $this->mixed .= '+' . $food->getRaw();
     }
 
     public function enjoy()
     {
+    }
+
+    public function getRaw(): string
+    {
+        return $this->mixed;
     }
 }

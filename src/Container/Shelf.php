@@ -13,9 +13,6 @@ class Shelf implements ContainerInterface
      */
     private $items;
 
-    /**
-     * @param ItemInterface[] $items
-     */
     public function __construct(ItemInterface ...$items)
     {
         $this->items = $items;

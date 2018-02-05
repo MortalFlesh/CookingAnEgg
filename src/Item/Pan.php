@@ -31,7 +31,7 @@ class Pan implements HeatableInterface, ItemInterface
         $food = new Food();
 
         foreach ($this->content as $part) {
-            $food->addFood($part);
+            $food->mixWith($part);
         }
 
         return $food;

@@ -10,18 +10,13 @@ class EggPack implements ItemInterface
     /** @var EggInterface[] */
     private $eggs;
 
-    /**
-     * @param EggInterface[] $eggs
-     */
+    /** @param EggInterface[] $eggs */
     public function __construct(array $eggs)
     {
         $this->eggs = $eggs;
     }
 
-    /**
-     * @param int $count
-     * @return EggInterface[]
-     */
+    /** @return EggInterface[] */
     public function getEggs(int $count): array
     {
         $realCount = max([count($this->eggs), $count]);
