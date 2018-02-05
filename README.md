@@ -1,7 +1,7 @@
 CookingAnEgg
 ============
 
-## Run PHP version
+## PHP version
 ```bash
 cd php
 ```
@@ -16,6 +16,17 @@ php home.php
 ```bash
 ./build.sh
 ./run.sh
+```
+
+
+## F# version
+```bash
+cd F#
+```
+
+### Run with fsharpi
+```bash
+fsharpi home.fsx
 ```
 
 
